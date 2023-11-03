@@ -43,5 +43,17 @@ print("FILE CLOSED : ",File2.closed)
 print("--------------")
 
 
+"""PASSING THE FILE INTO A LIST BASED ON LINES 
+
+1. USING THE readlines() automatically assigns the file as a list with each new line seen as a new index position
+2. It adds the \n into the mix to show a new line
+
+"""
+
+with open("../Files/file1.txt","r") as File3:
+
+    single_line_info = File3.readlines()
+
+    print(single_line_info)
 
 
