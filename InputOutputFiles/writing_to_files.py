@@ -19,3 +19,32 @@ with open("../Files/file2.txt","w") as File1:
         File1.write(line)
 
         print(line)
+
+"""APPENDING TO FILES
+
+1. USE THE 'a' mode
+2. It will overwrite any files & file directory with same name
+
+"""
+
+with open("../Files/file2.txt","a") as File2:
+
+    new_line = "Psalm 27 v 1 : The Lord is my light and my salvation, whom shall I fear? The Lord is the strength of my life, of whom shall I be afraid?\n"
+
+    File2.write(new_line)
+
+"""COPYING FILES FROM 1 FILE TO ANOTHER
+
+1. USE THE 'r' mode to GET THE INFO
+2. USE THE 'w' mode to WRITE THE INFO INTO NEW FILE
+
+"""
+
+#THis is the source file
+with open("../Files/file2.txt",'r') as File3:
+
+    #This is the destination file
+    with open('../Files/file1.txt','w') as File4:
+        #Read the lines from the SOurce file and then use the forloop to write them into the Destination file
+        for line in File3:
+            File4.write(line)
