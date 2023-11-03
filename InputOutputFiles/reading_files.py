@@ -29,6 +29,7 @@ File1.close()
 """
 
 with open("../Files/file1.txt","r") as File2:
+    print("\n----------------read()----------------------")
 
     #Start reading the files
     file_info = File2.read()
@@ -40,7 +41,7 @@ with open("../Files/file1.txt","r") as File2:
 
 
 print("FILE CLOSED : ",File2.closed)
-print("--------------")
+print("--------------------------------------")
 
 
 """PASSING THE FILE INTO A LIST BASED ON LINES 
@@ -51,9 +52,30 @@ print("--------------")
 """
 
 with open("../Files/file1.txt","r") as File3:
+    print("\n----------------readlines()----------------------")
 
     single_line_info = File3.readlines()
 
     print(single_line_info)
+
+
+"""READING ONLY THE VERY FIRST LINE
+
+1. Printing a single line at a time
+2. Auto iteration
+
+"""
+
+with open("../Files/file1.txt","r") as File4:
+
+    print("----------------readline()----------------------")
+
+    single_line_info = File4.readline()
+
+    print("LINE 1 :",single_line_info)
+
+    single_line_info = File4.readline()
+
+    print("LINE 2 :",single_line_info)
 
 
