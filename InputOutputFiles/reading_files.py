@@ -22,7 +22,26 @@ print(md)
 #Close the Project
 File1.close()
 
-"""ALTERNATIVE
+"""ALTERNATIVE 
+
+1. USING A WITH STATEMENT AUTO CLOSES 
 
 """
+
+with open("../Files/file1.txt","r") as File2:
+
+    #Start reading the files
+    file_info = File2.read()
+    print("----------------------------------")
+    print("READING FILE INFORMATION")
+    print(file_info)
+    print("END OF FILE INFORMATION")
+    print("----------------------------------")
+
+
+print("FILE CLOSED : ",File2.closed)
+print("--------------")
+
+
+
 
